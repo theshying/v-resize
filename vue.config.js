@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: 'v-resize',
+    publicPath: process.env.NODE_ENV === 'production' ? '/v-resize' : '/',
     pages: {
         index: {
             entry: "examples/main.js",
