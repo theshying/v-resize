@@ -1,7 +1,13 @@
 {
-  "name": "v-resize",
+  "name": "@theshy/v-resize",
   "version": "0.1.0",
-  "private": true,
+  "author": "theshy",
+  "description": "实时监听元素width/height属性变化的自定义vue指令",
+  "main": "lib/v-resize.umd.min.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "lib": "vue-cli-service build --target lib --name v-resize --dest lib src/index.js",
@@ -35,14 +41,22 @@
     },
     "rules": {}
   },
+  "peerDependencies": {
+    "vue": ">= 1.0.0"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
   ],
   "license": "MIT",
+ 
+  "homepage": "https://github.com/theshying/v-resize#readme",
   "bugs": {
     "url": "https://github.com/theshying/v-resize/issues"
   },
-  "homepage": "https://github.com/theshying/v-resize#readme"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theshying/v-resize"
+  }
 }

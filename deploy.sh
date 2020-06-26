@@ -6,6 +6,8 @@ set -e
 # 构建
 npm run build
 
+npm run lib
+
 # cd 到构建输出的目录下 
 cd dist
 
