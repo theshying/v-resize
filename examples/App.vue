@@ -54,6 +54,8 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    border: 10px solid #ccc
 }
 .box2 {
     background: blue;
