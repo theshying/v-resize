@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-import vResize from '../src/index'
+import vResize from '@theshy/v-resize'
+Vue.use(vResize)
 
-Vue.use(vResize);
 Vue.config.productionTip = false
 
 new Vue({
