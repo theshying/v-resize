@@ -3,7 +3,13 @@
         <button @click="changeBigger">bigger</button>
         <button @click="changeSmall">small</button>
         <div id="app" >
-            <div class="box1" v-resize="resizeHandler">监视器</div>
+            <div class="box1" v-resize="resizeHandler">
+            <p>监视器</p> 
+              <div v-if="resizeSize">
+                   <p> width：{{resizeSize.width+'px'}}</p>
+                    <p>height: {{resizeSize.height+'px'}}</p>
+              </div>
+            </div>
             <div class="box2" :style="{height: `${height}px`}"></div>
         </div>
     </div>
@@ -14,7 +20,7 @@ export default {
     name: "App",
     methods: {
         resizeHandler(val) {
-            console.log(val);
+            this.resizeSize = val
         },
         changeBigger() {
           this.height +=10
@@ -25,7 +31,8 @@ export default {
     },
     data() {
         return {
-            height: 100
+            height: 100,
+            resizeSize: null
         };
     }
 };
@@ -44,6 +51,7 @@ export default {
     background: green;
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
