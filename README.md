@@ -13,12 +13,17 @@
 
 </p>
 
-> 实时监听元素width/height属性变化的自定义vue指令
+> 实时监听dom元素尺寸变化的自定义vue指令
 ### [在线预览](https://theshying.github.io/v-resize)
 
 ## Introduction
-v-resize 是一个能够实时监听元素大小变化的自定义vue指令，而不需要关心是什么引起变化，无论是flexbox弹性计算引起的变化，还是窗口resize均能监听到，总之只要这个元素的大小有变化，均能监听到，且性能很好，不需要去轮询元素的大小。
+v-resize 是一个能够实时监听dom元素尺寸变化的自定义vue指令，
+我们不需要关心是什么引起变化，无论是flexbox弹性计算引起的变化，还是窗口resize均能监听到，甚至通过控制台修改元素的尺寸。
 
+总之只要这个元素的大小发生变化，均能监听到，且性能很好，不需要去轮询元素的大小。
+
+## How to do
+在支持resizeObserve的浏览器下，我们会优先使用原生resizeObserve来监听变化，否则我们会使用iframe来模拟window的resize事件实现监听
 
 
 ## How to use
@@ -43,13 +48,20 @@ Vue.use(vResize)
 export default {
     name: "App",
     methods: {
-        resizeHandler(val) {
-            console.log(val); //{width:xx , height: xxx}
+        resizeHandler(size) {
+            console.log(size); //{width:xx , height: xxx}
         },
     },
 };
 </script>
 ```
+
+>默认情况下第一次渲染的的时候不出触发resizeHandler，如果需要可以使用v-resize.immediate
+
+>ps: 监听到的size中包括元素宽度、内边距和溢出尺寸，不包括边框和外边距
+
+
+
 
 ## License
 This project is [MIT](https://github.com/theshying/element-admin-pro/blob/master/LICENSE) licensed.
