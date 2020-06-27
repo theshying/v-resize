@@ -3,7 +3,7 @@
         <button @click="changeBigger">bigger</button>
         <button @click="changeSmall">small</button>
         <div id="app" >
-            <div class="box1" v-resize="resizeHandler">
+            <div class="box1" v-resize.immediate="resizeHandler">
             <p>监视器</p> 
               <div v-if="resizeSize">
                    <p> width：{{resizeSize.width+'px'}}</p>
