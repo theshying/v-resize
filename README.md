@@ -56,7 +56,7 @@ export default {
 </script>
 ```
 
->默认情况下第一次渲染的的时候不出触发resizeHandler，如果需要可以使用v-resize.immediate
+>默认情况下dom元素第一次渲染的的时候不会触发resizeHandler，如果需要可以使用v-resize.immediate
 
 >ps: 监听到的size中包括元素宽度、内边距和溢出尺寸，不包括边框和外边距
 
