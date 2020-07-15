@@ -1,0 +1,1 @@
+#app{width:100%;height:600px;border:1px solid #000;color:#fff;flex-direction:column}#app,.box1{display:flex}.box1{background:green;flex:1;flex-direction:column;justify-content:center;align-items:center;padding:20px;border:10px solid #ccc}.box2{background:#00f}
