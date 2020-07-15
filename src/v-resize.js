@@ -70,7 +70,7 @@ const emitElementSize = () => {
 
 //是否支持原生resize observer
 const supportResizeObserver = () => {
-    return !isFunction(ResizeObserver)
+    return window.ResizeObserver && isFunction(window.ResizeObserver)
 }
 //是否是函数
 const isFunction = v => Object.prototype.toString.call(v) === '[object Function]'
