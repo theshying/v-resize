@@ -14,7 +14,7 @@
 </p>
 
 > 实时监听dom元素尺寸变化的自定义vue指令
-### [在线预览](https://theshying.github.io/v-resize)
+### [在线预览(兼容IE9+)](https://theshying.github.io/v-resize)
 
 ## Introduction
 v-resize 是一个能够实时监听dom元素尺寸变化的自定义vue指令，
