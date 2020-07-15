@@ -1,6 +1,6 @@
 {
   "name": "@theshy/v-resize",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "author": "theshy",
   "description": "实时监听元素width/height属性变化的自定义vue指令",
   "main": "lib/v-resize.umd.min.js",
